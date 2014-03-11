@@ -1,0 +1,614 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+html {
+  font-family: Arial,Helvetica,sans-serif;
+  background-color: white;
+  color: black;
+}
+table {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 1em 0em;
+  border: 1px solid black;
+}
+th, td {
+  border: 1px solid black;
+  padding: 0.1em 0.2em;
+  height: 1.5em;
+  width: 12em;
+}
+td.colspan4, th.colspan4 {
+    width: 48em;
+}
+td.colspan3, th.colspan3 {
+    width: 36em;
+}
+td.colspan2, th.colspan2 {
+    width: 24em;
+}
+th {
+  background-color: rgb(192, 192, 192);
+  color: black;
+  height: 1.7em;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+td.name {
+  background-color: rgb(240, 240, 240);
+  letter-spacing: 0.1em;
+}
+td.name, th.name {
+  width: 10em;
+}
+</style>
+<title>UIcatalogTest</title>
+</head>
+<body>
+<h1>UIcatalogTest</h1>
+<table border="1" id="setting">
+<tr>
+<th class="name" colspan="5">Settings</th>
+</tr>
+<tr>
+<td class="name">Test Setup</td>
+<td>open UIcatalogApp</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Test Teardown</td>
+<td>Close Browser</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Resource</td>
+<td>resource.txt</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Selenium2Library</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Collections</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>Process</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>${CURDIR}/./src/Selenium2LibraryExtensions</td>
+<td>WITH NAME</td>
+<td>Selenium2LibraryExtensions</td>
+<td></td>
+</tr>
+<tr>
+<td class="name">Library</td>
+<td>RequestsLibrary</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="testcase">
+<tr>
+<th class="name" colspan="5">Test Cases</th>
+</tr>
+<tr>
+<td class="name"><a name="test_testContainElements">testContainElements</a></td>
+<td>Sleep</td>
+<td>5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page Should Contain Element</td>
+<td>tag=tableView</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Xpath Should Match X Times</td>
+<td>//window[1]/tableview[1]/cell</td>
+<td>12</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${firstCellName} =</td>
+<td>Get Element Attribute</td>
+<td>//window[1]/tableview[1]/cell[1]@name</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${firstCellName}</td>
+<td>Buttons, Various uses of UIButton</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page Should Contain Element</td>
+<td>tag=navigationBar</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_testLocation">testLocation</a></td>
+<td>Sleep</td>
+<td>5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${thirdCell_x} =</td>
+<td>Get Vertical Position</td>
+<td>//window[1]/tableview[1]/cell[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${string_x}</td>
+<td>Convert To String</td>
+<td>${thirdCell_x}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${string_x}</td>
+<td>152</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${thirdCell_y} =</td>
+<td>Get Horizontal Position</td>
+<td>//window[1]/tableview[1]/cell[3]</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${string_y}</td>
+<td>Convert To String</td>
+<td>${thirdCell_y}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${string_y}</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_testScreenshot">testScreenshot</a></td>
+<td>Sleep</td>
+<td>5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Capture Page Screenshot</td>
+<td>page1.jpg</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_testAttributes">testAttributes</a></td>
+<td>Sleep</td>
+<td>5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>openMenuPosition</td>
+<td>9</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Run Keyword And Expect Error</td>
+<td>ERROR: Element //window[1]/scrollview[1]/segmented[1] is not an input.</td>
+<td>Element Should Be Enabled</td>
+<td>//window[1]/scrollview[1]/segmented[1]</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Element Should Be Visible</td>
+<td>//window[1]/scrollview[1]/segmented[1]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Element Should Not Be Visible</td>
+<td>//window[1]/tableview[1]/cell[1]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_testTextFieldEdit==action">testTextFieldEdit==action</a></td>
+<td>Sleep</td>
+<td>5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>openMenuPosition</td>
+<td>3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Page Should Contain Element</td>
+<td>//window[1]/tableview[1]/cell[1]/textfield[1]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${emptyValue}=</td>
+<td>Get Element Attribute</td>
+<td>//window[1]/tableview[1]/cell[1]/textfield[1]@value</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>log</td>
+<td>${emptyValue}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${random}</td>
+<td>Evaluate</td>
+<td>random.randint(100,999)</td>
+<td>random,sys</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Input Text</td>
+<td>//window[1]/tableview[1]/cell[1]/textfield[1]</td>
+<td>${random}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${getValue}=</td>
+<td>Get Element Attribute</td>
+<td>//window[1]/tableview[1]/cell[1]/textfield[1]@value</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${random_str}</td>
+<td>Convert To String</td>
+<td>${random}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Should Be Equal</td>
+<td>${random_str}</td>
+<td>${getValue}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${random2}</td>
+<td>Evaluate</td>
+<td>random.randint(100,999)</td>
+<td>random,sys</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>3s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Chain Send Keys To Element</td>
+<td>xpath=//window[1]/tableview[1]/cell[3]/textfield[1]</td>
+<td>${random2}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Chains Perform Now</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_testAlertInteraction">testAlertInteraction</a></td>
+<td>Sleep</td>
+<td>5s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>openMenuPosition</td>
+<td>11</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Sleep</td>
+<td>3s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Element</td>
+<td>//window[1]/tableview[1]/cell[7]/text[1]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Comment</td>
+<td>${alertMessage}=</td>
+<td>Get Alert Message</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Alert Should Be Present</td>
+<td>UIAlertView &lt;Alert message&gt;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_testScroll==action">testScroll==action</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_testSlider==action">testSlider==action</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_testSessions=">testSessions=</a></td>
+<td>Create Session</td>
+<td>sessionA</td>
+<td><a href="http://localhost:4723/wd/hub/sessions">http://localhost:4723/wd/hub/sessions</a></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${resp}=</td>
+<td>Get</td>
+<td>sessionA</td>
+<td>/</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${jsondata}=</td>
+<td>To Json</td>
+<td>${resp.content}</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${sessionB}=</td>
+<td>Get From Dictionary</td>
+<td>${jsondata}</td>
+<td>sessionId</td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${aa}=</td>
+<td>Get Cookies</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${driverSession}=</td>
+<td>Get Cookie Value</td>
+<td>sessionId</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_testSize==">testSize==</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="test_testSource==">testSource==</a></td>
+<td>sleep</td>
+<td>3s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>${resource}=</td>
+<td>Get Source</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Dictionary Should Contain Value</td>
+<td>${resource}</td>
+<td>UIATableView</td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<table border="1" id="keyword">
+<tr>
+<th class="name" colspan="5">Keywords</th>
+</tr>
+<tr>
+<td class="name"><a name="keyword_openUIcatalogApp">openUIcatalogApp</a></td>
+<td>openApp</td>
+<td>../../apps/UICatalog.app</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"><a name="keyword_openMenuPosition">openMenuPosition</a></td>
+<td>[Arguments]</td>
+<td>${arg1}</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td class="name"></td>
+<td>Click Element</td>
+<td>//window[1]/tableview[1]/cell[${arg1}]/text[1]</td>
+<td></td>
+<td></td>
+</tr>
+</table>
+</body>
+</html>

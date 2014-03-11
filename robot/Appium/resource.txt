@@ -1,0 +1,26 @@
+*** Settings ***
+Library           Selenium2Library
+Library           Collections
+
+*** Keywords ***
+openApp
+    [Arguments]    ${package}
+    ${capabilities}=    Create Dictionary
+    Set To Dictionary    ${capabilities}    browserName    ios
+    Set To Dictionary    ${capabilities}    version    6.1
+    Set To Dictionary    ${capabilities}    platform    Mac
+    Set To Dictionary    ${capabilities}    device    iPhone Simulator
+    Set To Dictionary    ${capabilities}    takesScreenshot    false
+    Set To Dictionary    ${capabilities}    javascriptEnabled    false
+    Comment    Set To Dictionary    ${capabilities}    app-activity    ${activity}
+    Set To Dictionary    ${capabilities}    app-package    ${package}
+    Log Dictionary    ${capabilities}
+    Close Browser
+    Close All Browsers
+    Set Selenium Timeout    30
+    Open Browser    \    browser=safari    remote_url=http://127.0.0.1:4723/wd/hub    desired_capabilities=${capabilities}
+
+openMenuPosition
+    [Arguments]    ${index}
+    Click Element    //window[1]/tableview[1]/cell[${index}]
+    sleep    5s
