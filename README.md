@@ -16,5 +16,6 @@ RFDemo-for-Appium
 
 
 4. Run the test scripts on Robot Framework IDE ride, or use command line:
-  cd **/appium/sample-code/examples/robot/Appium
-  pybot UIcatalogTest.html
+
+    cd **/appium/sample-code/examples/robot/Appium
+    pybot UIcatalogTest.html
